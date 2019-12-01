@@ -64,7 +64,7 @@ class Post(models.Model):#データベースの名前。頭文字は大文字。
 
     def publish(self):
         self.published_date = timezone.now()
-        self.save()
+        self.save()#.save()することでデータベースへ公開される
 
     def __str__(self):#__str__()を呼ぶとタイトルを出力する
         return self.title
