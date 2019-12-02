@@ -7,18 +7,24 @@ body{
 
 .page-header{
     background:#3b9a9c;
-    height:80px
+    height:120px;
 }
 
-.page-header a{
+.page-header a,.glyphicon-plus{
     color:white;
-    line-height: 80px;
+    line-height: 120px;
+    font-size:150%;
 }
 
 .post{
-    border-bottom: 5px dotted #4bc2c5;;
+    border-bottom: 5px dotted #4bc2c5;
 }
 
 .post a,.post h2{
     color:#3b9a9c;
+    font-size: 150%;
+}
+
+.top-menu{
+    float:right;
 }
