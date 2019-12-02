@@ -1,0 +1,24 @@
+{% load static %}
+{% load md5url %}
+
+<html>
+    <head>
+        <title>django girls</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"><!--記述した順番で読み込むため、下のほうが優先度が高い-->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"><!--記述した順番で読み込むため、下のほうが優先度が高い-->
+        <link rel="stylesheet" href="{% md5url 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-12">
+                   {% block content %}
+                   {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

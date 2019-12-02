@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',#メッセージフレームワーク
     'django.contrib.staticfiles',#静的ファイルの管理フレームワーク（HTMLの使いまわしができるのはこれのおかげ？）
     'blog.apps.BlogConfig',#自分で追加したモデル。構文は「'アプリ名.appsd.アプリ名(頭文字は大文字)Config'」説
+    'django_static_md5url',#クエリにバージョンを付与するためのアプリ。バージョンを付与することでキャッシュ対策（更新しても変わらない現象対策）になる
 
 ]
 

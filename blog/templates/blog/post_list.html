@@ -1,24 +1,18 @@
-<html>
-    <head>
-        <title>django girls</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girrls Blog</a></h1>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for i in postsx %}
+        <div class="post">
+            <h2><a href="{% url 'post_detail' pk=i.pk %}">{{ i.title }}</a></h2>
+            <div class ="contents">
+                <p>{{ i.text|linebreaksbr }}</p>
+            </div>
+            <div class ="auth">
+                <p>author:{{ i.author }}</p>
+            </div>
+            <div class="date">
+                <p>publish:{{ i.published_date }}</p>
+            </div>
         </div>
-        {% for i in postsx %}
-        <div>
-            <h2><a href="">{{i.title}}</a></h2>
-            <p>
-                {{i.text|linebreaksbr}}<!---|linebreaksbrはtextの中の改行を段落にしている-->
-            </p>
-            <p>
-                published:{{i.published_date}}
-            </p>
-            <p>
-                author:{{i.author}}
-            </p>
-        </div>
-        {% endfor %}
-    </body>
-</html>
+    {% endfor %}
+{% endblock %}
